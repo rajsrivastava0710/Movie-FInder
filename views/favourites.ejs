@@ -1,0 +1,25 @@
+<link rel="stylesheet" type="text/css" href="/css/favorite.css">
+
+<div class='hide'>
+<% for(fav of favs){ %>
+	<div class = 'favs' id='<%= fav %>'><%= fav %></div>
+<% } %>
+</div>
+
+<div id='circle'>
+</div>
+
+<div id='movie-list'>
+
+</div>
+<script type="text/javascript" src='/js/remove_favorite_page.js'></script>
+<script type="text/javascript" src='/js/favorite_movie.js'></script>
+<script>
+	const observer = lozad(); 
+	observer.observe();
+	$('.favs').each(function(){
+		let self = this;
+		new favoriteMovie(self);
+		// hideFav(self.id);
+	})
+</script>

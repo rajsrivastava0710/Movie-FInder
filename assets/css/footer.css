@@ -1,0 +1,10 @@
+footer{
+	border:2px solid black;
+	position:relative;
+	bottom:0;
+	min-height: 10vh;
+	padding: 2rem;
+	font-size: 2rem;
+	color: blue;
+	background:grey;
+}

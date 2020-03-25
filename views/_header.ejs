@@ -1,0 +1,31 @@
+<header>
+<div id='site-header'>
+<a id='nav-head' href='/'>Movie-Explorer</a>
+</div>
+<div id='rest-nav'>
+<% if(!locals.user){ %>
+<div id='auth-header'>
+<a href='/user/login'>Login</a>
+<a href='/user/signup'>SignUp</a>
+</div>
+<% }else{ %>
+<div id='search-bar'>
+
+<select id='dropdown'>
+	<option style='display: none'><a>Search By:</a></option>
+	<option id='search-text' value='movie_name'>Search by Movie Name</option>
+	<option id='search-imdb' value='movie_imdb'>Search by IMDB</option>
+	<option id='search-year' value='movie_year'>Search by Release Year</option>
+</select>
+
+</div>
+<div id='fav-header'>
+<a href='/movies/favourites'>My Favorites</a>
+</div>
+<div>
+<!-- <small><%= locals.user.name.toUpperCase() %></small> -->
+<a href='/user/remove-session'>LogOut</a>
+<% } %>
+</div>
+</div>
+</header>

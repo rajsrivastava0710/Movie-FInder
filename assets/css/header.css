@@ -1,0 +1,81 @@
+header{
+	/*padding: 1rem;*/
+	border:2px solid blue;
+	background:yellow;
+	display: flex;
+	justify-content: space-between;
+}
+div{
+	padding: 1rem;
+	align-self: center;
+	font-size: 1rem;
+}
+div#site-header{
+	width:35%;
+	font-size: 2rem;
+	font-weight: 600;
+}
+div#rest-nav{
+	font-size: 2rem;
+	padding: 0.2rem;
+	width:65%;
+	display: flex;
+	align-content:center;
+	justify-content: flex-end;
+} 
+div#auth-header{
+	display: flex;
+	justify-content: flex-end;
+}
+div a{
+	font-size: 2rem;
+}
+div#rest-nav a{
+	margin-left: 1.5rem;
+}
+div#rest-nav select{
+	font-size: 1.2rem;
+    height: 2.3rem;
+}
+div#fav-header a{
+	transition: 1.5s ease-in-out;
+	position: relative;
+}
+div#fav-header a:hover{
+	animation: bounce 1.5s ease-in-out infinite; 
+}
+
+@keyframes bounce{
+	0%{
+		top:0px;
+		color:blue;
+	}
+	25%{
+		top:10px;
+		color:green;
+	}
+	50%{
+		top:0;
+		color:red;
+	}
+	75%{
+		top:-10px;
+		color:yellow;
+	}
+	100%{
+		top:0;
+		color:blue;
+	}
+}
+
+div#search-bar{
+	position: relative;
+	/*left: 12rem;*/
+}
+div#message{
+	position: relative;
+    top: 10rem;
+    width: 40%;
+    text-align: center;
+    left: 23rem;
+}

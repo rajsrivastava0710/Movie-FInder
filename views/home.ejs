@@ -1,0 +1,22 @@
+<link rel="stylesheet" type="text/css" href="/css/home.css">
+<div class='input-cluster'>
+<input style='display: none' type='text' placeholder="Search by Name" name='name' id='search' class='searchbar'>
+<input style='display:none' type='text' placeholder='Search by IMDB' id='search_imdb' class='searchbar'>
+<input style='display:none' type='text' placeholder='Search Format:Year+Name (ex-2008+bat)' id='search_year' class='searchbar'>
+</div>
+<div style='display:none' id='circle'></div>
+<div id='movie-list'>
+</div>
+
+<% if(locals.user){ %>
+	<div id='message'>Hello <%= locals.user.name %> , Ready to search your favourite movies ?</div>
+	<% }else{ %>
+	<div id='message'>Sign In for using more features !</div>
+<% } %>
+<script>
+	const observer = lozad();
+	observer.observe();
+</script>
+<script type="text/javascript" src='/js/home.js'></script>
+<script type="text/javascript" src='/js/create_favorite.js'></script>
+<script type="text/javascript" src='/js/movie_search.js'></script>
